@@ -1,0 +1,199 @@
+/* Other styles as before */
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 0px;
+  z-index: 9999;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav h1{
+  margin-left: 20px;
+}
+
+/* Other styles as before */
+
+  
+  nav ul li a:hover {
+    color: #ffa500;
+  }
+  
+  .banner {
+    background-image: url('/static/bg_image1.avif');
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items:normal;
+    
+    text-indent: 45px;
+    text-shadow: #f0f0f0;
+    flex-direction: column;
+    size: 100cm;
+    font-size: 20px;
+    font-style: normal;
+
+    
+    color: black;
+
+   
+  }
+
+  .banner h2{
+    margin-top: 90px;
+  }
+
+ 
+  
+.project-image-container{
+  flex: 0 0 30%; /* Adjust the width of the image column */
+  text-align:start;
+  margin-left: 50px;
+  margin-top: 50px;
+  left: 50px;
+  margin-right: 10px; /* Add some spacing between the image and the text */
+  
+}
+
+.project-image {
+    max-width:40%;
+    left: 50px;
+    margin-top: 0px;
+    
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-text {
+    flex: 1; /* The text column will take up the remaining space */
+  font-style:initial;
+  margin-left: -20px;  
+  text-align: justify;
+  }
+
+  
+
+  #projectsID{
+    margin-left: 50px;
+  }
+ 
+ /* Other styles as before */
+
+.about-content {
+    
+ 
+  
+  padding: 50px;
+  display: flex; /* Use flexbox to create a two-column layout */
+  align-items: left; /* Align content vertically */
+}
+
+.profile-image-container {
+  flex: 0 0 30%; /* Adjust the width of the image column */
+  text-align:start;
+  margin-left: 10px;
+  margin-top: 90px;
+  left: 50px;
+  margin-right: 10px; /* Add some spacing between the image and the text */
+  
+}
+
+.profile-image {
+  max-width:75%;
+  left: 50px;
+  
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1; /* The text column will take up the remaining space */
+font-style:initial;
+
+}
+
+/* Other styles as before */
+
+pre{
+    font-style:initial;
+    font-size: 15px;
+}
+  
+
+  
+  
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+    
+    
+  }
+  
+  .project-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    
+  }
+  
+  .contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ffa500;
+  }
+  

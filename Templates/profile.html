@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile_styles.css') }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/signout">Sign Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="banner">
+      <h2 >Hello, I'm Srikanth Paladugu.</h2>
+      <p>Welcome to my portfolio</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-content">
+      <div class="profile-image-container">
+        <img src="/static/my_image.jpg" alt="Your Name" class="profile-image">
+      </div>
+      <div class="about-text">
+        <h2 >About Me</h2>
+        <pre>I work as a Power Apps developer at Microland Limited, where I create customized applications. 
+Along with my expertise in Power Apps, I also have experience in utilizing Power Automate for 
+workflow automation and SharePoint for collaborative document management.
+
+💼 Experience:
+
+Power Apps Developer at Microland Limited.
+Designing and developing robust Power Apps solutions.
+Automating tasks using Power Automate.
+
+💡 Skills:
+
+Power Apps Development
+Power Automate
+SharePoint
+Data Integration
+User Experience Design
+Problem Solving
+Team Collaboration
+
+🎓 Education:
+
+Bachelor's Degree in Information Technology.
+</pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 id = "projectsID">Projects</h2>
+    <div class="project-card">
+    <div class="project-image-container">
+      <img src="/static/coe_image.jpg" alt="Project 1" class="project-image">
+    </div>  
+    <div class="project-text">  
+    <h2>Circle Of Excellence</h2>
+      <p>I have designed and developed two Power Apps as part of my project. The first app enables individuals within the organization to submit nominations for any member they deem worthy. The second app, exclusive to administrators, facilitates the review of all nominations and empowers them to either approve or reject the submissions.
+
+        To streamline the business process, I have integrated a Power Automate flow, which allows the approved data to be exported effortlessly in both Excel and PDF formats. This integration significantly enhances the efficiency of the business operations, expediting the nomination and approval processes.
+        
+        Overall, these Power Apps and the integrated Power Automate flow serve as a valuable asset in optimizing and accelerating the organization's nomination and approval procedures.</p>
+      
+    </div>
+</div>
+<br>
+</section>
+
+  <section id="contact">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form method="POST" action="/contactme">
+        <input type="text" id="nameCD" name="nameCD" placeholder="Your Name" required>
+        <input type="email" id="emailCD" name="emailCD" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" id="messageCD" name="messageCD" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="/script/profile_script.js"></script>
+</body>
+</html>

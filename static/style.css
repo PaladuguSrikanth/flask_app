@@ -1,0 +1,99 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .card {
+    width: 300px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 50px;
+    
+  }
+
+  .card1 {
+    width: 0 auto;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    text-align: left;
+    
+    
+  }
+  
+  .form-input {
+    
+    width: 94%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-submit {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 0px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+  p.signout-link {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  a.signout-button {
+    color: #fff;
+    background-color: #f44336;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  a.signout-button:hover {
+    background-color: #e53935;
+  }
+  
+  a.signout-button:active {
+    background-color: #c62828;
+  }
+  

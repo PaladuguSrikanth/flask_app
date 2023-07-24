@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <style type="text/css">
+    body
+    {
+        counter-reset: Serial;          
+    }
+
+    table
+    {
+        border-collapse: separate;
+    }
+
+    .firsttable tr td:first-child:before
+    {
+      counter-increment: Serial;      
+      content: counter(Serial); 
+    }
+</style>
+</head>
+<body>
+  <h1>Welcome, {{ session['name'] }}!</h1>
+  <h3>Please find all the existed user's details below</h3>
+  <div class="card1">
+    <div class="card-content1">
+      <table border="2" cellpadding="10" class="firsttable">
+        <thead>
+          <tr>
+            <th>Sl.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Country</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td> </td>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[2] }}</td>
+            <td>{{ user[3] }}</td>
+            <td><button class="delete-button" data-email="{{ user[1] }}">Delete</button></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+  <script>
+    // Delete Button Click Event
+    var deleteButtons = document.querySelectorAll('.delete-button');
+    deleteButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var email = button.getAttribute('data-email');
+        deleteRow(email);
+      });
+    });
+
+    // Delete Row Function
+    function deleteRow(email) {
+      swal({
+        title: 'Are you sure?',
+        text: 'This action cannot be undone!',
+        icon: 'warning',
+        buttons: true,
+        dangerMode: true,
+      }).then(function (willDelete) {
+        if (willDelete) {
+          fetch('/delete', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+          }).then(function(response) {
+            if (response.ok) {
+              swal('Deleted Successfully!', {
+                icon: 'success'
+              }).then(function() {
+                window.location.reload();
+              });
+            } else {
+              swal('Error occurred while deleting!', {
+                icon: 'error'
+              });
+            }
+          }).catch(function(error) {
+            console.log('Error:', error);
+            swal('Error occurred while deleting!', {
+              icon: 'error'
+            });
+          });
+        }
+      });
+    }
+    
+
+  
+  </script>
+
+  
+  <h3>Please find all the Contact Me section details below</h3>
+  <div class="card1">
+    <div class="card-content1">
+      <table border="2" cellpadding="10">
+        <thead>
+          <tr>
+            
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% for user1 in contactMeDetails %}
+          <tr>
+            
+            <td>{{ user1[0] }}</td>
+            <td>{{ user1[1] }}</td>
+            <td>{{ user1[2] }}</td>
+          
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p><a href="/signout">Sign Out</a></p>
+
+</body>
+</html>

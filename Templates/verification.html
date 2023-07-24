@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificaion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Enter your email address to verify your access</h1>
+  {% if error %}
+    <p class="error">{{ error }}</p>
+  {% endif %}
+  <form method="POST" action="/verification">
+    <div class="card">
+      <div class="card-content">
+        <div class="form-group">
+          <label class="form-label" for="email">Email:</label>
+          <input class="form-input" type="email" id="email" name="email" required>
+        </div>
+        
+      </div>
+      <input class="form-submit" type="submit" value="verify">
+    </div>
+  </form>
+</body>
+</html>
